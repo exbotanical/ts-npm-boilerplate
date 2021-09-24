@@ -62,7 +62,7 @@ export default [
 		output: {
 			file: pkg.browser,
 			format: 'umd',
-			name: 'vivisector',
+			name: '<project>',
 			banner
 		},
 		plugins: [...pluginsBase]
@@ -74,7 +74,7 @@ export default [
 		output: {
 			file: pkg.browser.replace(/\.js$/, '.min.js'),
 			format: 'umd',
-			name: 'vivisector',
+			name: '<project>',
 			banner
 		},
 		plugins: [...pluginsBase, terser()]
@@ -97,7 +97,7 @@ export default [
 	{
 		input: './.build/index.d.ts',
 		output: {
-			file: 'dist/vivisector.d.ts',
+			file: 'dist/<project>.d.ts',
 			format: 'es'
 		},
 		plugins: [dts()]
