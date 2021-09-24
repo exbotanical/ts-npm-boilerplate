@@ -1,5 +1,6 @@
 # Project-Specific Addenda
 .build
+.rollup.cache
 
 # Logs
 logs
