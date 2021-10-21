@@ -97,7 +97,7 @@ export default [
 	{
 		input: './.build/index.d.ts',
 		output: {
-			file: 'dist/<project>.d.ts',
+			file: 'dist/index.d.ts',
 			format: 'es'
 		},
 		plugins: [dts()]
