@@ -1,9 +1,8 @@
-[![Build
-Status](https://travis-ci.com/MatthewZito/<project>.svg?branch=master)](https://travis-ci.com/MatthewZito/<project>)
+# <project>
+
+[![Build Status](https://travis-ci.com/MatthewZito/<project>.svg?branch=master)](https://travis-ci.com/MatthewZito/<project>)
 [![npm version](https://badge.fury.io/js/<project>.svg)](https://badge.fury.io/js/<project>)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-# <project>
 
 ## Installation
 
