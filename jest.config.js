@@ -1,4 +1,5 @@
 module.exports = {
+	setupFilesAfterEnv: ['<rootDir>/__tests__/setup.ts'],
 	testRegex: '.test.ts$',
 	coverageDirectory: './coverage',
 	collectCoverage: true,
