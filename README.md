@@ -1,6 +1,5 @@
 # <project>
 
-
 [![Coverage Status](https://coveralls.io/repos/github/MatthewZito/<project>/badge.svg?branch=master)](https://coveralls.io/github/MatthewZito/<project>?branch=master)
 [![Continuous Deployment](https://github.com/MatthewZito/<project>/actions/workflows/cd.yml/badge.svg)](https://github.com/MatthewZito/<project>/actions/workflows/cd.yml)
 [![Continuous Integration](https://github.com/MatthewZito/<project>/actions/workflows/ci.yml/badge.svg)](https://github.com/MatthewZito/<project>/actions/workflows/ci.yml)
