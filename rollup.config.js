@@ -2,7 +2,7 @@ import path from 'path';
 
 import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import nodeResolve from '@rollup/plugin-node-resolve'; // eslint-disable-line import/no-named-as-default
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
@@ -29,8 +29,8 @@ const pluginsBase = [
 		outputToFilesystem: false
 	}),
 	nodeResolve({
-		jsnext: true,
-		browser: true
+		browser: true,
+		jsnext: true
 	}),
 	commonjs({
 		extensions: ['.js', '.ts']
@@ -45,14 +45,14 @@ const pluginsBase = [
 export default [
 	/* CommonJS */
 	{
+		external,
 		input: inputFileName,
 		output: {
-			file: pkg.main,
-			format: 'cjs',
+			banner,
 			exports: 'named',
-			banner
+			file: pkg.main,
+			format: 'cjs'
 		},
-		external,
 		plugins: [...pluginsBase]
 	},
 
@@ -60,10 +60,10 @@ export default [
 	{
 		input: inputFileName,
 		output: {
+			banner,
 			file: pkg.browser,
 			format: 'umd',
-			name: '<project>',
-			banner
+			name: 'http-factory'
 		},
 		plugins: [...pluginsBase]
 	},
@@ -72,24 +72,24 @@ export default [
 	{
 		input: inputFileName,
 		output: {
+			banner,
 			file: pkg.browser.replace(/\.js$/, '.min.js'),
 			format: 'umd',
-			name: '<project>',
-			banner
+			name: 'http-factory'
 		},
 		plugins: [...pluginsBase, terser()]
 	},
 
 	/* ESM */
 	{
+		external,
 		input: inputFileName,
 		output: {
-			file: pkg.module,
-			format: 'es',
+			banner,
 			exports: 'named',
-			banner
+			file: pkg.module,
+			format: 'es'
 		},
-		external,
 		plugins: [...pluginsBase]
 	},
 
