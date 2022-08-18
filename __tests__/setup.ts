@@ -1,8 +1,7 @@
-/* eslint-disable jest/require-top-level-describe */
-beforeAll(() => {});
+beforeAll(() => {})
 
-beforeEach(() => {});
+beforeEach(() => {})
 
 afterEach(() => {
-	jest.clearAllMocks();
-});
+  vi.clearAllMocks()
+})
