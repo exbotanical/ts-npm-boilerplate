@@ -1,10 +1,8 @@
 {
-  "include": [
-    "src"
-  ],
+  "include": ["src", "*.ts"],
   "compilerOptions": {
-		"composite": true,
-		"rootDir": "src",
+    "composite": true,
+    "rootDir": "src",
     "declaration": true,
     "declarationDir": ".build",
     "emitDeclarationOnly": true,
@@ -13,8 +11,8 @@
     "strict": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
     "noUnusedParameters": true
   }
 }
