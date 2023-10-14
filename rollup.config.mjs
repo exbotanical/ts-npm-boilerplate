@@ -1,15 +1,21 @@
-import path from 'path'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import { babel } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import { nodeResolve } from '@rollup/plugin-node-resolve' // eslint-disable-line import/namespace
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
-import { terser } from 'rollup-plugin-terser'
+import terser from '@rollup/plugin-terser'
 
-import pkg from './package.json'
+import pkg from './package.json' assert { type: 'json' }
 
-const resolve = fp => path.resolve(__dirname, fp)
+const _dirname =
+  typeof __dirname !== 'undefined'
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url))
+
+const resolve = fp => path.resolve(_dirname, fp)
 
 const inputFileName = 'src/index.ts'
 const moduleName = pkg.name.replace(/^@.*\//, '')
@@ -95,7 +101,7 @@ export default [
 
   /* Types Declarations */
   {
-    input: './.build/index.d.ts',
+    input: './.build/src/index.d.ts',
     output: {
       file: 'dist/index.d.ts',
       format: 'es',

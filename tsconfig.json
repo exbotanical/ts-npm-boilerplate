@@ -2,7 +2,7 @@
   "include": ["src", "*.ts"],
   "compilerOptions": {
     "composite": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "declaration": true,
     "declarationDir": ".build",
     "emitDeclarationOnly": true,
