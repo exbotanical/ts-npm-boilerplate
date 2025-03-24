@@ -1,18 +1,13 @@
 {
-  "include": ["src", "*.ts"],
   "compilerOptions": {
-    "composite": true,
-    "rootDir": ".",
-    "declaration": true,
-    "declarationDir": ".build",
-    "emitDeclarationOnly": true,
+    "target": "ESNext",
+    "baseUrl": ".",
     "module": "ESNext",
-    "lib": ["ESNext"],
+    "moduleResolution": "Bundler",
     "strict": true,
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
-  }
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["./test/fixtures/**/*.*"]
 }

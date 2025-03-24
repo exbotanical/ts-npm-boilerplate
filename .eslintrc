@@ -1,4 +1,0 @@
-{
-  "extends": ["@magister_zito/typescript", "prettier"],
-  "ignorePatterns": [".build"]
-}
